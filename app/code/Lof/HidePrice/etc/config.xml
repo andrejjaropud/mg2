@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Landofcoder
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Landofcoder.com license that is
+ * available through the world-wide-web at this URL:
+ * http://landofcoder.com/license
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Landofcoder
+ * @package    Lof_HidePrice
+ * @copyright  Copyright (c) 2016 Landofcoder (http://www.landofcoder.com/)
+ * @license    http://www.landofcoder.com/LICENSE-1.0.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<lofhideprice>
+			<general>
+				<enable_module>1</enable_module>
+				<enable>1</enable>
+				<max_width>800</max_width>
+				<max_height>800</max_height>
+				<min_width>400</min_width>
+				<min_height>400</min_height>
+			</general>
+			<recaptcha>
+				<recaptcha_theme>light</recaptcha_theme>
+				<recaptcha_sitekey>6LcS9x0TAAAAAI37rHG-tDVs4dXB1mA-Hh7WBZgq</recaptcha_sitekey>
+				<recaptcha_secretkey>6LcS9x0TAAAAAMHqUvORdm8D-i3KScq_2UL-YiPv</recaptcha_secretkey>
+			</recaptcha>
+			<emailsend>
+				<send_thanks_email>0</send_thanks_email>
+				<emailsenderto>general</emailsenderto>
+				<emailtemplate>lofhideprice_emailsend_emailtemplate</emailtemplate>
+			</emailsend>
+		</lofhideprice>
+	</default>
+</config>

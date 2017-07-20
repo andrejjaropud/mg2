@@ -1,0 +1,76 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+
+    <type name="Mirasvit\Feed\Export\Filter\Pool">
+        <arguments>
+            <argument name="scopes" xsi:type="array">
+                <item name="string" xsi:type="object">Mirasvit\Feed\Export\Filter\StringFilter</item>
+                <item name="currency" xsi:type="object">Mirasvit\Feed\Export\Filter\CurrencyFilter</item>
+                <item name="array" xsi:type="object">Mirasvit\Feed\Export\Filter\ArrayFilter</item>
+                <item name="number" xsi:type="object">Mirasvit\Feed\Export\Filter\NumberFilter</item>
+                <item name="url" xsi:type="object">Mirasvit\Feed\Export\Filter\UrlFilter</item>
+                <item name="image" xsi:type="object">Mirasvit\Feed\Export\Filter\ImageFilter</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Mirasvit\Feed\Export\Resolver\Pool">
+        <arguments>
+            <argument name="resolvers" xsi:type="array">
+                <item name="product_configurable" xsi:type="array">
+                    <item name="resolver" xsi:type="object">Mirasvit\Feed\Export\Resolver\Product\ConfigurableResolver</item>
+                    <item name="for" xsi:type="string">Magento\Catalog\Model\Product</item>
+                    <item name="type_id" xsi:type="string">configurable</item>
+                </item>
+                <item name="product_grouped" xsi:type="array">
+                    <item name="resolver" xsi:type="object">Mirasvit\Feed\Export\Resolver\Product\GroupedResolver</item>
+                    <item name="for" xsi:type="string">Magento\Catalog\Model\Product</item>
+                    <item name="type_id" xsi:type="string">grouped</item>
+                </item>
+                <item name="product_bundle" xsi:type="array">
+                    <item name="resolver" xsi:type="object">Mirasvit\Feed\Export\Resolver\Product\BundleResolver</item>
+                    <item name="for" xsi:type="string">Magento\Catalog\Model\Product</item>
+                    <item name="type_id" xsi:type="string">bundle</item>
+                </item>
+
+                <item name="product" xsi:type="array">
+                    <item name="resolver" xsi:type="object">Mirasvit\Feed\Export\Resolver\ProductResolver</item>
+                    <item name="for" xsi:type="string">Magento\Catalog\Model\Product</item>
+                </item>
+                <item name="category" xsi:type="array">
+                    <item name="resolver" xsi:type="object">Mirasvit\Feed\Export\Resolver\CategoryResolver</item>
+                    <item name="for" xsi:type="string">Magento\Catalog\Model\Category</item>
+                </item>
+                <item name="store" xsi:type="array">
+                    <item name="resolver" xsi:type="object">Mirasvit\Feed\Export\Resolver\StoreResolver</item>
+                    <item name="for" xsi:type="string">Magento\Store\Model\Store</item>
+                </item>
+                <item name="review" xsi:type="array">
+                    <item name="resolver" xsi:type="object">Mirasvit\Feed\Export\Resolver\ReviewResolver</item>
+                    <item name="for" xsi:type="string">Magento\Review\Model\Review</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\Console\CommandList">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="FeedExportCommand" xsi:type="object">Mirasvit\Feed\Console\Command\ExportCommand</item>
+                <item name="FeedDeliveryCommand" xsi:type="object">Mirasvit\Feed\Console\Command\DeliveryCommand</item>
+                <item name="FeedCronCommand" xsi:type="object">Mirasvit\Feed\Console\Command\CronCommand</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Mirasvit\Report\Api\Repository\ReportRepositoryInterface">
+        <arguments>
+            <argument name="reports" xsi:type="array">
+                <item name="feed_overview" xsi:type="string">Mirasvit\Feed\Reports\Feed</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Mirasvit\Feed\Api\Service\ImportServiceInterface" type="Mirasvit\Feed\Service\ImportService"/>
+    <preference for="Mirasvit\Feed\Api\Service\ExportServiceInterface" type="Mirasvit\Feed\Service\ExportService"/>
+    <preference for="Mirasvit\Feed\Api\Factory\EntityFactoryInterface" type="Mirasvit\Feed\Factory\EntityFactory"/>
+</config>

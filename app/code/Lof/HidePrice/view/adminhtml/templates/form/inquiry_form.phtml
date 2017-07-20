@@ -1,0 +1,169 @@
+
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/* @var $block \Magento\Catalog\Block\Adminhtml\Product\Edit\Tab\Price\Tier */
+
+$element = $block->getElement();
+
+?>
+<?php $_htmlId      = $block->getElement()->getHtmlId() ?>
+<?php $_htmlClass   = $block->getElement()->getClass() ?>
+<?php $_htmlName    = $block->getElement()->getName() ?>
+<?php $_readonly    = $block->getElement()->getReadonly() ?>
+
+
+<?php $_priceValueValidation = $block->getPriceValidation('validate-greater-than-zero'); ?>
+
+
+<?php $_showWebsite = true; ?>
+<div class="field" id="attribute-<?php /* @escapeNotVerified */ echo $_htmlId?>-container" data-attribute-code="<?php /* @escapeNotVerified */ echo $_htmlId?>"
+     data-apply-to="<?php echo $block->escapeHtml(
+         $this->helper('Magento\Framework\Json\Helper\Data')->jsonEncode(
+             $element->hasEntityAttribute() ? $element->getEntityAttribute()->getApplyTo() : []
+         )
+     )?>">
+    <label class="label"><span><?php /* @escapeNotVerified */ echo $block->getElement()->getLabel() ?></span></label>
+    <div class="control">
+        <table class="admin__control-table tiers_table" id="tiers_table">
+            <thead>
+                <tr>
+                    <th class="col-label"><?php /* @escapeNotVerified */ echo __('Label') ?></th>
+                    <th class="col-type"><?php /* @escapeNotVerified */ echo __('Type') ?></th>
+                    <th class="col-required"><?php /* @escapeNotVerified */ echo __('Required') ?></th>
+                    <th class="col-enable"><?php /* @escapeNotVerified */ echo __('Enable') ?></th>
+                    <th class="col-delete"><?php /* @escapeNotVerified */ echo __('Action') ?></th>
+                </tr>
+            </thead>
+            <tbody id="<?php /* @escapeNotVerified */ echo $_htmlId ?>_container"></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="<?php if (!$_showWebsite): ?>4<?php else: ?>5<?php endif; ?>" class="col-actions-add"><?php echo $block->getAddButtonHtml() ?></td>
+                </tr>
+            </tfoot>
+        </table>
+
+<script>
+require([
+    'mage/template',
+    "prototype",
+    "mage/adminhtml/form"
+], function (mageTemplate) {
+
+//<![CDATA[
+var tierPriceRowTemplate = '<tr>'
+    + '<td class="col-label">'
+        + '<input class="<?php /* @escapeNotVerified */ echo $_htmlClass ?>" type="text" name="<?php /* @escapeNotVerified */ echo $_htmlName ?>[<%- data.index %>][label]" value="<%- data.label %>" id="inquiry_form_row<%- data.index %>_label" />'
+    
+    +'</td>'
+    + '<td class="col-type">'
+       + '<select class="<?php /* @escapeNotVerified */ echo $_htmlClass ?> required-entry" name="<?php /* @escapeNotVerified */ echo $_htmlName ?>[<%- data.index %>][type]" id="inquiry_form_row<%- data.index %>_type">'
+            + '<option value="1"><?php /* @escapeNotVerified */ echo __('Text Field'); ?></option>'
+            + '<option value="2"><?php /* @escapeNotVerified */ echo __('Text Area'); ?></option>'
+            + '<option value="3"><?php /* @escapeNotVerified */ echo __('Check Box'); ?></option>'
+        + '</select>'
+    + '</td>'
+    + '<td class="col-required">'
+         + '<select class="<?php /* @escapeNotVerified */ echo $_htmlClass ?> required-entry" name="<?php /* @escapeNotVerified */ echo $_htmlName ?>[<%- data.index %>][required]" id="inquiry_form_row<%- data.index %>_required">'
+            + '<option value="0"><?php /* @escapeNotVerified */ echo __('No'); ?></option>'
+            + '<option value="1"><?php /* @escapeNotVerified */ echo __('Yes'); ?></option>'
+        + '</select>'
+    +'</td>'
+    + '<td class="col-enable">'
+         + '<select class="<?php /* @escapeNotVerified */ echo $_htmlClass ?> required-entry" name="<?php /* @escapeNotVerified */ echo $_htmlName ?>[<%- data.index %>][enable]" id="inquiry_form_row<%- data.index %>_enable">'
+           + '<option value="0"><?php /* @escapeNotVerified */ echo __('No'); ?></option>'
+            + '<option value="1"><?php /* @escapeNotVerified */ echo __('Yes'); ?></option>'
+        + '</select>'
+    +'</td>'
+    + '<td class="col-delete"><input type="hidden" name="<?php /* @escapeNotVerified */ echo $_htmlName ?>[<%- data.index %>][delete]" class="delete" value="" id="inquiry_form_row<%- data.index %>_delete" />'
+    + '<button title="<?php /* @escapeNotVerified */ echo $block->escapeHtml(__('Delete Tier')); ?>" type="button" class="action- scalable delete icon-btn delete-product-option" id="inquiry_form_row<%- data.index %>_delete_button" onclick="return inquiryFormControl.deleteItem(event);">'
+    + '<span><?php /* @escapeNotVerified */ echo __("Delete") ?></span></button></td>'
+    + '</tr>';
+
+var inquiryFormControl = {
+    template: mageTemplate(tierPriceRowTemplate),
+    itemsCount: 0,
+    addItem : function () {
+        <?php if ($_readonly): ?>
+        if (arguments.length < 4) {
+            return;
+        }
+        <?php endif; ?>
+        var data = {
+            label: '',
+            type: 0,
+            required: 0,
+            readOnly: false,
+            index: this.itemsCount++
+        };
+
+        if(arguments.length >= 4) {
+            data.label      = arguments[0];
+            data.type        = arguments[1];
+            data.required      = arguments[2];
+            data.enable      = arguments[3];
+        }
+        if (arguments.length == 4) {
+            data.readOnly = arguments[4];
+        }
+
+        Element.insert($('<?php /* @escapeNotVerified */ echo $_htmlId ?>_container'), {
+            bottom : this.template({
+                data: data
+            })
+        });
+
+        $('inquiry_form_row' + data.index + '_type').value = data.type;
+        $('inquiry_form_row' + data.index + '_required').value = data.required;
+        $('inquiry_form_row' + data.index + '_enable').value = data.enable;
+        
+
+        if (data.readOnly == '1') {
+            ['label', 'type', 'required','enable' ,'delete'].each(function(idx){
+                $('inquiry_form_row'+data.index+'_'+idx).disabled = true;
+            });
+            $('inquiry_form_row'+data.index+'_delete_button').hide();
+        }
+
+        <?php if ($_readonly): ?>
+        $('<?php /* @escapeNotVerified */ echo $_htmlId ?>_container').select('input', 'select').each(this.disableElement);
+        $('<?php /* @escapeNotVerified */ echo $_htmlId ?>_container').up('table').select('button').each(this.disableElement);
+        <?php else: ?>
+        $('<?php /* @escapeNotVerified */ echo $_htmlId ?>_container').select('input', 'select').each(function(el){ Event.observe(el, 'change', el.setHasChanges.bind(el)); });
+        <?php endif; ?>
+    },
+    disableElement: function(el) {
+        el.disabled = true;
+        el.addClassName('disabled');
+    },
+    deleteItem: function(event) {
+        var tr = Event.findElement(event, 'tr');
+        if (tr) {
+            Element.select(tr, '.delete').each(function(elem){elem.value='1'});
+            Element.select(tr, ['input', 'select']).each(function(elem){elem.hide()});
+            Element.remove(tr);
+            //Element.addClassName(tr, 'no-display template');
+        }
+        return false;
+    }
+};
+<?php foreach ($block->getValues() as $_item): ?>
+inquiryFormControl.addItem('<?php /* @escapeNotVerified */ echo $_item['label'] ?>', '<?php /* @escapeNotVerified */ echo $_item['type'] ?>', '<?php /* @escapeNotVerified */ echo $_item['required'] ?>','<?php /* @escapeNotVerified */ echo $_item['enable'] ?>');
+<?php endforeach; ?>
+<?php if ($_readonly): ?>
+$('<?php /* @escapeNotVerified */ echo $_htmlId ?>_container').up('table').select('button')
+    .each(inquiryFormControl.disableElement);
+<?php endif; ?>
+
+window.inquiryFormControl = inquiryFormControl;
+//]]>
+
+});
+</script>
+    </div>
+</div>

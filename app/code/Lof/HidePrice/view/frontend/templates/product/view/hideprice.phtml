@@ -1,0 +1,88 @@
+<?php
+$helper   = $this->helper('Lof\HidePrice\Helper\Data');
+$maxWidth = $helper->getConfig('general/max_width');
+$maxHeight = $helper->getConfig('general/max_height');
+$minWidth = $helper->getConfig('general/min_width');
+$minHeight = $helper->getConfig('general/min_height');
+$_product = $block->getProduct();
+$ObjectManager= \Magento\Framework\App\ObjectManager::getInstance();
+$context = $ObjectManager->get('Magento\Framework\App\Http\Context');
+$isLoggedIn = $context->getValue(\Magento\Customer\Model\Context::CONTEXT_AUTH);
+$customer_group_current = $context->getValue(\Magento\Customer\Model\Context::CONTEXT_GROUP);
+?>
+
+<?php if($_product && $_product->getHidePrice()){ 
+	try {
+
+		$hideprice = $helper->hideprice->getCollection()->addFieldToFilter('hideprice_id',$_product->getHidePrice());
+	
+		foreach ($hideprice as $key => $_hideprice) {
+			$customer_group = json_decode($_hideprice->getCallforpriceCustomergroup(),true);
+        	$store_id = json_decode($_hideprice->getStoreId(),true);
+        	
+			if($_hideprice->getIsActive() == 1 && ((in_array($customer_group_current,$customer_group) == true) || ((in_array(0,$customer_group) ==false && $isLoggedIn ==false) || in_array(0,$customer_group) ==true)) && (in_array($helper->getStoreId(), $store_id) == true || in_array(0,$store_id ) == true)) {
+				$text = $_hideprice->getCallforpriceText();
+				?>
+				<div class="hideprice" id="hideprice_<?php echo $_product->getId(); ?>">
+					<p class="callforprice_text">
+						<a href="#" class="btnfancy_<?php echo $_product->getId(); ?> action primary">
+						<?php echo $helper->filter($_hideprice->getCallforpriceText()); ?>
+						</a>
+					</p>
+					<div id="hideprice_content_<?php echo $_product->getId(); ?>" style="display: none;">
+						<?php echo $helper->filter($_hideprice->getContent()); ?>
+					</div>
+				</div>	
+		
+				<script type="text/javascript">
+					require([
+						'jquery',
+						'Lof_All/lib/fancybox/jquery.fancybox.pack'
+						], function($){
+						jQuery(document).ready(function($) {
+							$('.formbuilder-form').prev().remove();
+							<?php if(!empty($helper->filter($_hideprice->getContent()))) { ?>
+							jQuery(".btnfancy_<?php echo $_product->getId(); ?>").fancybox({
+								'href'   : '#hideprice_content_<?php echo $_product->getId(); ?>',
+								'titleShow'  : false,
+								'transitionIn'  : 'elastic',
+								'transitionOut' : 'elastic',
+								<?php if((int)$minWidth > 0) { echo "'minWidth' : ".$minWidth .","; } ?>
+                        		<?php if((int)$minHeight > 0) { echo "'minHeight' : ".$minHeight .","; } ?>
+								<?php if((int)$maxWidth > 0) { echo "'maxWidth' : ".$maxWidth .","; } ?>
+								<?php if((int)$maxHeight > 0) { echo "'maxHeight' : ".$maxHeight .","; } ?>
+							});
+							var text = $('#hideprice_content_<?php echo $_product->getId();?> .help-block').text().replace('product_hideprice', '<?php echo $_product->getName();?>');
+							$('#hideprice_content_<?php echo $_product->getId();?> .help-block').text(text); 
+							<?php } ?>
+							
+							$('#hideprice_content_<?php echo $_product->getId(); ?>').find('#entity_id').val('<?php echo $_product->getId(); ?>');
+							$('#hideprice_content_<?php echo $_product->getId(); ?>').find('#hideprice_id').val('<?php echo $_product->getHidePrice(); ?>');
+							if($('.hideprice').parents('.widget').length <= 0) {
+								$('.hideprice').remove();
+							}
+							jQuery("#hideprice_<?php echo $_product->getId(); ?>").parents('.product-item-details').addClass('lof-hideprice');
+							jQuery("#hideprice_<?php echo $_product->getId(); ?>").parents('.product-item-details').find('.product-item-actions .actions-primary').remove();
+							
+							jQuery("#hideprice_<?php echo $_product->getId(); ?>").prependTo(jQuery("#hideprice_<?php echo $_product->getId(); ?>").parents('.product-item-details').find('.product-item-actions'));
+							
+							<?php
+
+							if(!$isLoggedIn) { ?>
+								if($('.hideprice').parents('.widget').length > 0) {
+								$('.hideprice').parents('.product-item-details').find('.product-item-actions .actions-primary').html('');
+								}
+							<?php } ?>
+						});
+					});
+				</script>
+				<?php
+			} 
+		}
+	} //catch exception
+	catch(Exception $e) {
+
+	}
+?>
+
+<?php } ?>

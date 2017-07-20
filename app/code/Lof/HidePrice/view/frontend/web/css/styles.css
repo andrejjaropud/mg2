@@ -1,0 +1,26 @@
+.lof-hideprice > p > a {
+	width: unset;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.hideprice .formbuilder-form  {
+	display: none;
+}
+.product-item-actions .hideprice + .actions-secondary {
+    display: table-cell;
+    padding-left: 5px;
+    width: 30%;
+}
+.product-item-actions .hideprice {
+    display: table-cell;
+    margin-top: 20px;
+}
+.lof-hideprice .product-item-actions {
+    margin-top:45px;
+}
+.lof-hideprice .action.primary {
+    padding: 7px 14px;
+    border-radius: 0px;
+}

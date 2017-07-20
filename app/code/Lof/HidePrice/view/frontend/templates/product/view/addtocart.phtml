@@ -1,0 +1,129 @@
+<?php
+$ObjectManager= \Magento\Framework\App\ObjectManager::getInstance();
+$context = $ObjectManager->get('Magento\Framework\App\Http\Context');
+$validator = $ObjectManager->get('Lof\HidePrice\Model\Validator');
+
+$isLoggedIn = $context->getValue(\Magento\Customer\Model\Context::CONTEXT_AUTH);
+$customer_group_current = $context->getValue(\Magento\Customer\Model\Context::CONTEXT_GROUP);
+$helper = $this->helper("Lof\HidePrice\Helper\Data");
+$maxWidth = $helper->getConfig('general/max_width');
+$maxHeight = $helper->getConfig('general/max_height');
+$minWidth = $helper->getConfig('general/min_width');
+$minHeight = $helper->getConfig('general/min_height');
+$_product = $block->getProduct();
+$product_id = $_product->getId(); 
+$validate = $validator->validate($product_id);
+$buttonTitle = __('Add to Cart');
+$connection = $this->_resource->getConnection();
+$table = $this->_resource->getTableName('lof_hideprice_product');
+$where = ' entity_id = '.$product_id;
+$select = 'SELECT * FROM ' . $table.' WHERE'.$where;
+
+$hideprice = $connection->fetchAll($select);
+
+$addtocart = '';
+?>
+<?php if ($_product->isSaleable()): 
+$addtocart .= '<div class="box-tocart">
+    <div class="fieldset">';
+        if ($block->shouldRenderQuantity()): 
+        $addtocart .= '	
+        <div class="field qty">
+            <label class="label" for="qty"><span>'.__('Qty').'</span></label>
+            <div class="control">
+                <input type="number"
+                   name="qty"
+                   id="qty"
+                   maxlength="12"
+                   value="'.$block->getProductDefaultQty() * 1 .'"
+                   title="'.__('Qty').'" class="input-text qty"
+                   data-validate="'.$block->escapeHtml(json_encode($block->getQuantityValidators())).'"
+                   />
+            </div>
+        </div>';
+        endif;
+        $addtocart .= '	
+        <div class="actions">
+            <button type="submit"
+                    title="'.$buttonTitle.'"
+                    class="action primary tocart"
+                    id="product-addtocart-button">
+                <span>'.$buttonTitle.'</span>
+            </button>
+            '.$block->getChildHtml('', true).'
+        </div>
+    </div>
+</div>';
+endif; 
+if ((count($hideprice) > 0 || $validate) && $helper->getConfig('general/enable_module') == 1) {
+    if(count($hideprice) > 0) {
+	   $hideprice = $this->hideprice->getCollection()->addFieldToFilter('hideprice_id',$hideprice[0]['hideprice_id']);
+    } elseif($validate) {
+        $hideprice = $this->hideprice->getCollection()->addFieldToFilter('hideprice_id',$validate);
+    }
+ 
+	foreach ($hideprice as $key => $_hideprice) {
+        
+        $customer_group = json_decode($_hideprice->getCallforpriceCustomergroup(),true);
+        $store_id = json_decode($_hideprice->getStoreId(),true);
+        
+		if($_hideprice->getIsActive() == 1 && (in_array($customer_group_current,$customer_group) == true  || ((in_array(0,$customer_group) ==false && $isLoggedIn ==false) || in_array(0,$customer_group) ==true)) && ((in_array($helper->getStoreId(), $store_id) == true) || (in_array(0,$store_id ) == true))) {
+			echo "<p class='callforprice_text'><a href='#' class='btnfancy_hideprice_".$_product->getId()." action primary'>".$helper->filter($_hideprice->getCallforpriceText())."</a></p>";
+			echo "<div id='hideprice_content_".$_product->getId()."' style='display: none;'>".$helper->filter($_hideprice->getContent())."</div>";
+		} else {
+			echo $addtocart;
+		}
+	
+    ?>
+        <script type="text/javascript">
+            require([
+                'jquery',
+                'Lof_All/lib/fancybox/jquery.fancybox.pack'
+                ], function($){
+                jQuery(document).ready(function($) {
+                    $('.formbuilder-form').prev().remove();
+                    <?php if(!empty($helper->filter($_hideprice->getContent()))) { ?>
+                    jQuery(".btnfancy_hideprice_<?php echo $_product->getId(); ?>").fancybox({
+                        'href'   : '#hideprice_content_<?php echo $_product->getId(); ?>',
+                        'titleShow'  : false,
+                        'transitionIn'  : 'elastic',
+                        'transitionOut' : 'elastic',
+                        <?php if((int)$minWidth > 0) { echo "'minWidth' : ".$minWidth .","; } ?>
+                        <?php if((int)$minHeight > 0) { echo "'minHeight' : ".$minHeight .","; } ?>
+                        <?php if((int)$maxWidth > 0) { echo "'maxWidth' : ".$maxWidth .","; } ?>
+                        <?php if((int)$maxHeight > 0) { echo "'maxHeight' : ".$maxHeight .","; } ?>
+                    });
+                    <?php } ?>
+                    $('#hideprice_content_<?php echo $_product->getId(); ?>').find('#entity_id').val('<?php echo $_product->getId(); ?>');
+                    $('#hideprice_content_<?php echo $_product->getId(); ?>').find('#hideprice_id').val('<?php echo $_hideprice->getHidepriceId(); ?>');
+                });
+
+            });
+        </script>
+<?php  
+    }  
+} else { 
+	echo $addtocart;
+}
+
+?>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "Magento_Catalog/product/view/validation": {
+                "radioCheckboxClosest": ".nested"
+            }
+        }
+    }
+</script>
+<?php if (!$block->isRedirectToCartEnabled()) : ?>
+<script type="text/x-magento-init">
+    {
+        "#product_addtocart_form": {
+            "catalogAddToCart": {
+                "bindSubmit": false
+            }
+        }
+    }
+</script>
+<?php endif; ?>

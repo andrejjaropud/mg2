@@ -1,0 +1,134 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Product view template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View
+ */
+?>
+<?php $_helper = $this->helper('Magento\Catalog\Helper\Output'); ?>
+<?php
+$ObjectManager= \Magento\Framework\App\ObjectManager::getInstance();
+$context = $ObjectManager->get('Magento\Framework\App\Http\Context');
+$validator = $ObjectManager->get('Lof\HidePrice\Model\Validator');
+
+$isLoggedIn = $context->getValue(\Magento\Customer\Model\Context::CONTEXT_AUTH);
+$customer_group_current = $context->getValue(\Magento\Customer\Model\Context::CONTEXT_GROUP);
+$helper = $this->helper("Lof\HidePrice\Helper\Data");
+$maxWidth = $helper->getConfig('general/max_width');
+$maxHeight = $helper->getConfig('general/max_height');
+$_product = $block->getProduct();
+$product_id = $_product->getId(); 
+$validate = $validator->validate($product_id);
+$buttonTitle = __('Add to Cart');
+$connection = $this->_resource->getConnection();
+$table = $this->_resource->getTableName('lof_hideprice_product');
+$where = ' entity_id = '.$product_id;
+$select = 'SELECT * FROM ' . $table.' WHERE'.$where;
+
+$hideprice = $connection->fetchAll($select);
+
+if ((count($hideprice) > 0 || $validate) && $helper->getConfig('general/enable_module') == 1) {
+    if(count($hideprice) > 0) {
+       $hideprice = $this->hideprice->getCollection()->addFieldToFilter('hideprice_id',$hideprice[0]['hideprice_id']);
+    } elseif($validate) {
+        $hideprice = $this->hideprice->getCollection()->addFieldToFilter('hideprice_id',$validate);
+    }
+ 
+    foreach ($hideprice as $key => $_hideprice) {
+        
+        $customer_group = json_decode($_hideprice->getCallforpriceCustomergroup(),true);
+        $store_id = json_decode($_hideprice->getStoreId(),true);
+        
+        if($_hideprice->getIsActive() == 1 && (in_array($customer_group_current,$customer_group) == true  || ((in_array(0,$customer_group) ==false && $isLoggedIn ==false) || in_array(0,$customer_group) ==true)) && ((in_array($helper->getStoreId(), $store_id) == true) || (in_array(0,$store_id ) == true))) { ?>
+            <div class="product-add-form">
+                <input type="hidden" name="product" value="<?php /* @escapeNotVerified */ echo $_product->getId() ?>" />
+                <input type="hidden" name="selected_configurable_option" value="" />
+                <input type="hidden" name="related_product" id="related-products-field" value="" />
+                <?php echo $block->getBlockHtml('formkey')?>
+                <?php echo $block->getChildHtml('form_top'); ?>
+                <?php if (!$block->hasOptions()):?>
+                    <?php echo $block->getChildHtml('product_info_form_content'); ?>
+                <?php else:?>
+                    <?php if ($_product->isSaleable() && $block->getOptionsContainer() == 'container1'):?>
+                        <?php echo $block->getChildChildHtml('options_container') ?>
+                    <?php endif;?>
+                <?php endif; ?>
+
+                <?php if ($_product->isSaleable() && $block->hasOptions() && $block->getOptionsContainer() == 'container2'):?>
+                    <?php echo $block->getChildChildHtml('options_container') ?>
+                <?php endif;?>
+                <?php echo $block->getChildHtml('form_bottom'); ?>
+            </div>    
+        <?php } else { ?>
+            <div class="product-add-form">
+                <form action="<?php /* @escapeNotVerified */ echo $block->getSubmitUrl($_product) ?>" method="post"
+                      id="product_addtocart_form"<?php if ($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+                    <input type="hidden" name="product" value="<?php /* @escapeNotVerified */ echo $_product->getId() ?>" />
+                    <input type="hidden" name="selected_configurable_option" value="" />
+                    <input type="hidden" name="related_product" id="related-products-field" value="" />
+                    <?php echo $block->getBlockHtml('formkey')?>
+                    <?php echo $block->getChildHtml('form_top'); ?>
+                    <?php if (!$block->hasOptions()):?>
+                        <?php echo $block->getChildHtml('product_info_form_content'); ?>
+                    <?php else:?>
+                        <?php if ($_product->isSaleable() && $block->getOptionsContainer() == 'container1'):?>
+                            <?php echo $block->getChildChildHtml('options_container') ?>
+                        <?php endif;?>
+                    <?php endif; ?>
+
+                    <?php if ($_product->isSaleable() && $block->hasOptions() && $block->getOptionsContainer() == 'container2'):?>
+                        <?php echo $block->getChildChildHtml('options_container') ?>
+                    <?php endif;?>
+                    <?php echo $block->getChildHtml('form_bottom'); ?>
+                </form>
+            </div>
+        <?php }
+    }
+} else { ?>
+    <div class="product-add-form">
+    <form action="<?php /* @escapeNotVerified */ echo $block->getSubmitUrl($_product) ?>" method="post"
+          id="product_addtocart_form"<?php if ($_product->getOptions()): ?> enctype="multipart/form-data"<?php endif; ?>>
+        <input type="hidden" name="product" value="<?php /* @escapeNotVerified */ echo $_product->getId() ?>" />
+        <input type="hidden" name="selected_configurable_option" value="" />
+        <input type="hidden" name="related_product" id="related-products-field" value="" />
+        <?php echo $block->getBlockHtml('formkey')?>
+        <?php echo $block->getChildHtml('form_top'); ?>
+        <?php if (!$block->hasOptions()):?>
+            <?php echo $block->getChildHtml('product_info_form_content'); ?>
+        <?php else:?>
+            <?php if ($_product->isSaleable() && $block->getOptionsContainer() == 'container1'):?>
+                <?php echo $block->getChildChildHtml('options_container') ?>
+            <?php endif;?>
+        <?php endif; ?>
+
+        <?php if ($_product->isSaleable() && $block->hasOptions() && $block->getOptionsContainer() == 'container2'):?>
+            <?php echo $block->getChildChildHtml('options_container') ?>
+        <?php endif;?>
+        <?php echo $block->getChildHtml('form_bottom'); ?>
+    </form>
+    </div>
+
+<?php    
+}    
+?>
+<script>
+    require([
+        'jquery',
+        'Magento_Catalog/js/price-box'
+    ], function($){
+        var priceBoxes = $('[data-role=priceBox]');
+
+        priceBoxes = priceBoxes.filter(function(index, elem){
+            return !$(elem).find('.price-from').length;
+        });
+
+        priceBoxes.priceBox({'priceConfig': <?php /* @escapeNotVerified */ echo $block->getJsonConfig() ?>});
+    });
+</script>

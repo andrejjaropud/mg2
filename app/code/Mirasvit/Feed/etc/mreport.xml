@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="../../../../module-reports/src/Reports/etc/map.xsd">
+    <table name="mst_feed_report">
+        <columns>
+            <column name="created_at" label="Purchased On" fields="created_at" type="date"
+                    class="Mirasvit\Report\Model\Query\Column\Date\Range"/>
+
+            <column name="day" label="Day" fields="created_at"
+                    class="Mirasvit\Report\Model\Query\Column\Date\Day"/>
+
+            <column name="week" label="Week" fields="created_at"
+                    class="Mirasvit\Report\Model\Query\Column\Date\Week"/>
+
+            <column name="month" label="Month" fields="created_at"
+                    class="Mirasvit\Report\Model\Query\Column\Date\Month"/>
+
+            <column name="quarter" label="Quarter" fields="created_at"
+                    class="Mirasvit\Report\Model\Query\Column\Date\Quarter"/>
+
+            <column name="year" label="Year" fields="created_at"
+                    class="Mirasvit\Report\Model\Query\Column\Date\Year"/>
+
+            <column name="sum_clicks" label="Number of Clicks" fields="is_click" type="number"
+                    expr="SUM(%1)"/>
+
+            <column name="sum_orders" label="Number of Orders" fields="order_id" type="number"
+                    expr="COUNT(DISTINCT(%1))" />
+
+            <column name="sum_subtotal" label="Revenue" fields="subtotal" type="price"
+                    expr="SUM(%1)" />
+
+            <column name="subtotal_per_click" label="Revenue per Click" fields="is_click, subtotal" type="price"
+                    expr="SUM(%2) / SUM(%1)" />
+
+            <column name="feed_id" label="Feed" fields="feed_id" type="number" />
+            <column name="product_id" label="Product" fields="product_id" type="number" />
+        </columns>
+    </table>
+
+    <table name="mst_feed_feed">
+        <columns>
+            <column name="name" label="Feed" fields="name" type="text"/>
+        </columns>
+    </table>
+
+    <relation name="mst_feed_report2mst_feed_feed">
+        <leftTable>mst_feed_report</leftTable>
+        <rightTable>mst_feed_feed</rightTable>
+        <condition>%1.feed_id=%2.feed_id</condition>
+        <type>n1</type>
+    </relation>
+
+    <relation name="mst_feed_report2catalog_product_entity">
+        <leftTable>mst_feed_report</leftTable>
+        <rightTable>catalog_product_entity</rightTable>
+        <condition>%1.product_id=%2.entity_id</condition>
+        <type>n1</type>
+    </relation>
+</config>

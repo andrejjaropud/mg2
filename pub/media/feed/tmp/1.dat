@@ -1,0 +1,198 @@
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+<yml_catalog date="29.05.2017 14:13:28">
+  <shop>
+    <name>llorens.com.ua</name>
+    <company>Symag Sp. z o.o.</company>
+    <url>http://llorens.com.ua/index.php/</url>
+    <platform>Magento</platform>
+    <email>example@example.com</email>
+    <currencies>
+      <currency id="UAH" rate="1" />
+    </currencies>
+    <categories>
+      <category id="2" parentId="1"><![CDATA[Default Category]]></category>
+      <category id="3" parentId="2"><![CDATA[Llorens]]></category>
+      <category id="4" parentId="10"><![CDATA[Lalki płaczące]]></category>
+      <category id="5" parentId="10"><![CDATA[Lalki]]></category>
+      <category id="6" parentId="10"><![CDATA[Bobasy płaczące]]></category>
+      <category id="7" parentId="10"><![CDATA[Bobasy]]></category>
+      <category id="8" parentId="10"><![CDATA[Ubranka]]></category>
+      <category id="9" parentId="1"><![CDATA[llorens.com.ua]]></category>
+      <category id="10" parentId="1"><![CDATA[llorens.pl]]></category>
+      <category id="11" parentId="9"><![CDATA[Куклы]]></category>
+    </categories>
+    <offers>
+      <offer id="13" available="true">
+        <url><![CDATA[http://b2b.symag.pl/index.php/llorens-bobas-placzacy-carol-33-cm.html]]></url>
+        <price>100.0000</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>4</categoryId>
+        <picture>http://llorens.com.ua/media/catalog/product/3/3/33276.jpg</picture>
+        <store>true</store>
+        <pickup>true</pickup>
+        <delivery>false</delivery>
+        <local_delivery_cost>300</local_delivery_cost>
+        <name><![CDATA[LLORENS Bobas płaczący Carol 33 cm]]></name>
+        <vendor></vendor>
+        <vendorCode>33276</vendorCode>
+        <description><![CDATA[Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. Po wyjęciu smoczka bobas zapłacze i zawoła: mama, papa! Carol ma kr&oacute;tkie blond włoski oraz piękne niebieskie oczy. Gł&oacute;wkę naszej lalki zdobi r&oacute;żowa czapeczka z pomponami. Carol ubrana jest w białą koszulkę z r&oacute;żowym kr&oacute;likiem i białym pomponem,białe spodenki w r&oacute;żowe gwiazdki,r&oacute;żową narzutkę oraz r&oacute;żowe skarpetki pasujące do kompletu &nbsp;Lalka zapakowana jest w kartonowe pudełko, idealne na prezent. Do lalki dołączony jest smoczek.]]></description>
+        <sales_notes><![CDATA[Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. Po wyjęciu smoczka bobas zapłacze i zawoła: mama, papa! Carol ma kr&oacute;tkie blond włoski oraz piękne niebieskie oczy. Gł&oacute;wkę naszej lalki zdobi r&oacute;żowa czapeczka z pomponami. Carol ubrana jest w białą koszulkę z r&oacute;żowym kr&oacute;likiem i białym pomponem,białe spodenki w r&oacute;żowe gwiazdki,r&oacute;żową narzutkę oraz r&oacute;żowe skarpetki pasujące do kompletu &nbsp;Lalka zapakowana jest w kartonowe pudełko, idealne na prezent. Do lalki dołączony jest smoczek.]]></sales_notes>
+        <country_of_origin></country_of_origin>
+      </offer>
+      <offer id="23" available="true">
+        <url><![CDATA[http://b2b.symag.pl/index.php/llorens-lalka-placzaca-lidia.html]]></url>
+        <price>100.0000</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>4</categoryId>
+        <picture>http://llorens.com.ua/media/catalog/product/3/8/38538.jpg</picture>
+        <store>true</store>
+        <pickup>true</pickup>
+        <delivery>false</delivery>
+        <local_delivery_cost>300</local_delivery_cost>
+        <name><![CDATA[LLORENS Lalka płacząca Lidia ]]></name>
+        <vendor></vendor>
+        <vendorCode>38538</vendorCode>
+        <description><![CDATA[Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. Po wyjęciu smoczka lalka zapłacze i zawoła: mama, papa! Gł&oacute;wkę naszej lali zdobią piękne niebieskie oczy, jasne blond włoski oraz r&oacute;żowa czapeczka z atłasowymi r&oacute;życzkami i pomponem. Lidia ubrana jest jasną sukienkę w kratę, r&oacute;żowy sweterek z kapturem oraz skarpetki pasujące go kompletu. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.]]></description>
+        <sales_notes><![CDATA[Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. Po wyjęciu smoczka lalka zapłacze i zawoła: mama, papa! Gł&oacute;wkę naszej lali zdobią piękne niebieskie oczy, jasne blond włoski oraz r&oacute;żowa czapeczka z atłasowymi r&oacute;życzkami i pomponem. Lidia ubrana jest jasną sukienkę w kratę, r&oacute;żowy sweterek z kapturem oraz skarpetki pasujące go kompletu. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.]]></sales_notes>
+        <country_of_origin></country_of_origin>
+      </offer>
+      <offer id="30" available="true">
+        <url><![CDATA[http://b2b.symag.pl/index.php/llorens-lalka-placzaca-diara-38-cm.html]]></url>
+        <price>100.0000</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>4</categoryId>
+        <picture>http://llorens.com.ua/media/catalog/product/3/8/38614.jpg</picture>
+        <store>true</store>
+        <pickup>true</pickup>
+        <delivery>false</delivery>
+        <local_delivery_cost>300</local_delivery_cost>
+        <name><![CDATA[LLORENS Lalka płacząca Diara 38 cm]]></name>
+        <vendor></vendor>
+        <vendorCode>38614</vendorCode>
+        <description><![CDATA[Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. Po wyjęciu smoczka lalka zapłacze i zawoła: mama, papa! Gł&oacute;wkę naszej lali zdobią piękne brązowe oczy oraz kruczo czarne włoski upięte w dwie kiteczki, związane r&oacute;żowymi frotkami. Diara ubrana jest w r&oacute;żową sukienkę z kr&oacute;liczkiem pod kt&oacute;rą ma r&oacute;żowe spodenki, biały bezrękawnik we wzorki z kapturem oraz skarpetki pasujące do kompletu. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.Do lalki dołączony jest ozdobny smoczek.&nbsp;]]></description>
+        <sales_notes><![CDATA[Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. Po wyjęciu smoczka lalka zapłacze i zawoła: mama, papa! Gł&oacute;wkę naszej lali zdobią piękne brązowe oczy oraz kruczo czarne włoski upięte w dwie kiteczki, związane r&oacute;żowymi frotkami. Diara ubrana jest w r&oacute;żową sukienkę z kr&oacute;liczkiem pod kt&oacute;rą ma r&oacute;żowe spodenki, biały bezrękawnik we wzorki z kapturem oraz skarpetki pasujące do kompletu. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.Do lalki dołączony jest ozdobny smoczek.&nbsp;]]></sales_notes>
+        <country_of_origin></country_of_origin>
+      </offer>
+      <offer id="51" available="true">
+        <url><![CDATA[http://b2b.symag.pl/index.php/llorens-lalka-placzaca-nico.html]]></url>
+        <price>100.0000</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>4</categoryId>
+        <picture>http://llorens.com.ua/media/catalog/product/4/8/48229.jpg</picture>
+        <store>true</store>
+        <pickup>true</pickup>
+        <delivery>false</delivery>
+        <local_delivery_cost>300</local_delivery_cost>
+        <name><![CDATA[Llorens lalka płacząca Nico]]></name>
+        <vendor></vendor>
+        <vendorCode>48229</vendorCode>
+        <description><![CDATA[Nasze śliczne lalki wykonane są z wysokiej jakości materiał&oacute;w. Ich ciała zrobione zostały z przyjemnego w dotyku winylu. Brzuszek wypełniony jest miękką wyści&oacute;łką. Po wyjęciu smoczka lalka zapłacze i zawoła: mama, papa! Gł&oacute;wkę naszej lali zdobią piękne błękitne oczy, kr&oacute;tkie blond włoski oraz czapka w kolorze niebieskim z dwoma białymi pomponami. Nico ubrany jest w niebieski kostium z białym misiem, sweterek w kolorze niebieskim oraz skarpetki pasujące do kompletu. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent. Do lalki dołączony jest ozdobny smoczek.]]></description>
+        <sales_notes><![CDATA[Nasze śliczne lalki wykonane są z wysokiej jakości materiał&oacute;w. Ich ciała zrobione zostały z przyjemnego w dotyku winylu. Brzuszek wypełniony jest miękką wyści&oacute;łką. Po wyjęciu smoczka lalka zapłacze i zawoła: mama, papa! Gł&oacute;wkę naszej lali zdobią piękne błękitne oczy, kr&oacute;tkie blond włoski oraz czapka w kolorze niebieskim z dwoma białymi pomponami. Nico ubrany jest w niebieski kostium z białym misiem, sweterek w kolorze niebieskim oraz skarpetki pasujące do kompletu. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent. Do lalki dołączony jest ozdobny smoczek.]]></sales_notes>
+        <country_of_origin></country_of_origin>
+      </offer>
+      <offer id="68" available="true">
+        <url><![CDATA[http://b2b.symag.pl/index.php/llorens-lalka-laura-brunetka.html]]></url>
+        <price>100.0000</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>5</categoryId>
+        <picture>http://llorens.com.ua/media/catalog/product/5/4/54515.jpg</picture>
+        <store>true</store>
+        <pickup>true</pickup>
+        <delivery>false</delivery>
+        <local_delivery_cost>300</local_delivery_cost>
+        <name><![CDATA[LLORENS Lalka Laura brunetka 45 cm]]></name>
+        <vendor></vendor>
+        <vendorCode>54515</vendorCode>
+        <description><![CDATA[Nasze śliczne lalki wykonane są z wysokiej jakości materiał&oacute;w. Ich ciała zrobione zostały z przyjemnego w dotyku winylu. Brzuszek wypełniony jest miękką wyści&oacute;łką. Głowę lali zdobią piękne, brązowe oczy, długie i czrne rzęsy oraz proste, kasztanowe włosy, upięte po bokach. Laura ubrana jest w r&oacute;żową sukienkę w kwiaty, czerwono-r&oacute;żowy płaszczyk, r&oacute;żowe rajstopki i czarne buciki pasujące do &nbsp;kompletu. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.]]></description>
+        <sales_notes><![CDATA[Nasze śliczne lalki wykonane są z wysokiej jakości materiał&oacute;w. Ich ciała zrobione zostały z przyjemnego w dotyku winylu. Brzuszek wypełniony jest miękką wyści&oacute;łką. Głowę lali zdobią piękne, brązowe oczy, długie i czrne rzęsy oraz proste, kasztanowe włosy, upięte po bokach. Laura ubrana jest w r&oacute;żową sukienkę w kwiaty, czerwono-r&oacute;żowy płaszczyk, r&oacute;żowe rajstopki i czarne buciki pasujące do &nbsp;kompletu. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.]]></sales_notes>
+        <country_of_origin></country_of_origin>
+      </offer>
+      <offer id="76" available="true">
+        <url><![CDATA[http://b2b.symag.pl/index.php/llorens-lalka-lala-z-torba-do-przewijania-40-cm.html]]></url>
+        <price>100.0000</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>6</categoryId>
+        <picture>http://llorens.com.ua/media/catalog/product/7/4/74020.jpg</picture>
+        <store>true</store>
+        <pickup>true</pickup>
+        <delivery>false</delivery>
+        <local_delivery_cost>300</local_delivery_cost>
+        <name><![CDATA[LLORENS Lalka Lala z torbą do przewijania 40 cm]]></name>
+        <vendor></vendor>
+        <vendorCode>74020</vendorCode>
+        <description><![CDATA[Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. &nbsp;Po naciśnięciu brzuszka bobas zapłacze i zawoła: mama, papa! Smoczek służy do dekoracji. Gł&oacute;wkę naszej lali zdobiąpiękne, błękitne oczy z ciemnymi rzęsami oraz biała czapeczka. Lala ubrana jest w białe śpioszki, r&oacute;żowy sweterek i ażurowe skarpetki z atłasowymi kokardkami. Do lalki dołączona jest mata (nosidełko), pluszowa zabawka, butelka do karmienia, ozdobny smoczek oraz pieluszka. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.]]></description>
+        <sales_notes><![CDATA[Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. &nbsp;Po naciśnięciu brzuszka bobas zapłacze i zawoła: mama, papa! Smoczek służy do dekoracji. Gł&oacute;wkę naszej lali zdobiąpiękne, błękitne oczy z ciemnymi rzęsami oraz biała czapeczka. Lala ubrana jest w białe śpioszki, r&oacute;żowy sweterek i ażurowe skarpetki z atłasowymi kokardkami. Do lalki dołączona jest mata (nosidełko), pluszowa zabawka, butelka do karmienia, ozdobny smoczek oraz pieluszka. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.]]></sales_notes>
+        <country_of_origin></country_of_origin>
+      </offer>
+      <offer id="112" available="true">
+        <url><![CDATA[http://b2b.symag.pl/index.php/llorens-bobasek-nica-w-kocyku-do-kapieli.html]]></url>
+        <price>100.0000</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>7</categoryId>
+        <picture>http://llorens.com.ua/media/catalog/product/7/3/73830.jpg</picture>
+        <store>true</store>
+        <pickup>true</pickup>
+        <delivery>false</delivery>
+        <local_delivery_cost>300</local_delivery_cost>
+        <name><![CDATA[LLORENS bobasek Nica w kocyku do kąpieli]]></name>
+        <vendor></vendor>
+        <vendorCode>73830</vendorCode>
+        <description><![CDATA[Nasze śliczne lalki wykonane są z wysokiej jakości materiał&oacute;w. Ich ciała zrobione zostały z przyjemnego w dotyku winylu. lala ma piękne błękitne oczy oraz delikatne rzęsy. Nica ubrana jest w białe majteczki w r&oacute;żowe groszki, koszulkę z aplikacją misia i atłasową kokardką oraz mięciutki, r&oacute;żowy szlafroczek kąpielowy z kapturem i uszkami jak u misia.Do lalki dołączony jest ozdobny smoczek oraz pluszowy szlafroczek. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.]]></description>
+        <sales_notes><![CDATA[Nasze śliczne lalki wykonane są z wysokiej jakości materiał&oacute;w. Ich ciała zrobione zostały z przyjemnego w dotyku winylu. lala ma piękne błękitne oczy oraz delikatne rzęsy. Nica ubrana jest w białe majteczki w r&oacute;żowe groszki, koszulkę z aplikacją misia i atłasową kokardką oraz mięciutki, r&oacute;żowy szlafroczek kąpielowy z kapturem i uszkami jak u misia.Do lalki dołączony jest ozdobny smoczek oraz pluszowy szlafroczek. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.]]></sales_notes>
+        <country_of_origin></country_of_origin>
+      </offer>
+      <offer id="129" available="true">
+        <url><![CDATA[http://b2b.symag.pl/index.php/llorens-bobas-dziewczynka-do-kapieli-w-rozowym-ubranku.html]]></url>
+        <price>100.0000</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>11</categoryId>
+        <picture>http://llorens.com.ua/media/catalog/product/4/5/45020.jpg</picture>
+        <store>true</store>
+        <pickup>true</pickup>
+        <delivery>false</delivery>
+        <local_delivery_cost>300</local_delivery_cost>
+        <name><![CDATA[LLORENS bobas dziewczynka do kąpieli 45 cm]]></name>
+        <vendor></vendor>
+        <vendorCode>45020</vendorCode>
+        <description><![CDATA[Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej całe ciało wykonane jest z przyjemnego w dotyku winylu. Lalka ubrana jest w r&oacute;żowe spodenki oraz r&oacute;żową bluzeczkę z długim rękawem ozdobioną atłasową kokardką. Głowę zdobi r&oacute;żowa czapeczka z pomponami z boku. Dopełnieniem kompletu są skarpetki z pomponami oraz ozdobny smoczek. Lalka będzie wspaniałym kompanem kąpieli każdego dziecka.&nbsp;]]></description>
+        <sales_notes><![CDATA[Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej całe ciało wykonane jest z przyjemnego w dotyku winylu. Lalka ubrana jest w r&oacute;żowe spodenki oraz r&oacute;żową bluzeczkę z długim rękawem ozdobioną atłasową kokardką. Głowę zdobi r&oacute;żowa czapeczka z pomponami z boku. Dopełnieniem kompletu są skarpetki z pomponami oraz ozdobny smoczek. Lalka będzie wspaniałym kompanem kąpieli każdego dziecka.&nbsp;]]></sales_notes>
+        <country_of_origin></country_of_origin>
+      </offer>
+      <offer id="133" available="true">
+        <url><![CDATA[http://b2b.symag.pl/index.php/llorens-lalka-helene-42-cm.html]]></url>
+        <price>100.0000</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>11</categoryId>
+        <picture>http://llorens.com.ua/media/catalog/product/5/4/54202.jpg</picture>
+        <store>true</store>
+        <pickup>true</pickup>
+        <delivery>false</delivery>
+        <local_delivery_cost>300</local_delivery_cost>
+        <name><![CDATA[Llorens Lalka Helene 42 cm]]></name>
+        <vendor></vendor>
+        <vendorCode>54202</vendorCode>
+        <description><![CDATA[Całe ciało lalki Heleny wykonane jest z winylu, jej ręce, nogi i głowa obraca się wok&oacute;ł własnej osi, dzięki czemu lalkę można ustawiać w najr&oacute;żniejszych pozycjach, r&oacute;wnież stojącej. Helene ma piękne, niebieskie oczy z gęstymi, ciemnymi rzęsami oraz długie blond włosy. Lalka ubrana jest w jasną dzianinową sukienkę, białe rajstopki, popielato-beżowy płaszczyk oraz czapeczkę z pomponem pasującą do zestawu. Dopełnienie do kompletu stanowi ciepły jasny szalik z pomponami oraz beżowe kozaczki z kożuszkiem. Perfekcyjnie wykończona lalka w modnym stroju dla wymagających klient&oacute;w.&nbsp;]]></description>
+        <sales_notes><![CDATA[Całe ciało lalki Heleny wykonane jest z winylu, jej ręce, nogi i głowa obraca się wok&oacute;ł własnej osi, dzięki czemu lalkę można ustawiać w najr&oacute;żniejszych pozycjach, r&oacute;wnież stojącej. Helene ma piękne, niebieskie oczy z gęstymi, ciemnymi rzęsami oraz długie blond włosy. Lalka ubrana jest w jasną dzianinową sukienkę, białe rajstopki, popielato-beżowy płaszczyk oraz czapeczkę z pomponem pasującą do zestawu. Dopełnienie do kompletu stanowi ciepły jasny szalik z pomponami oraz beżowe kozaczki z kożuszkiem. Perfekcyjnie wykończona lalka w modnym stroju dla wymagających klient&oacute;w.&nbsp;]]></sales_notes>
+        <country_of_origin></country_of_origin>
+      </offer>
+      <offer id="136" available="true">
+        <url><![CDATA[http://b2b.symag.pl/index.php/llorens-bobasek-tino-z-kocykiem.html]]></url>
+        <price>100.0000</price>
+        <currencyId>UAH</currencyId>
+        <categoryId>11</categoryId>
+        <picture>http://llorens.com.ua/media/catalog/product/8/4/84307.jpg</picture>
+        <store>true</store>
+        <pickup>true</pickup>
+        <delivery>false</delivery>
+        <local_delivery_cost>300</local_delivery_cost>
+        <name><![CDATA[LLORENS Bobasek Tino z kocykiem]]></name>
+        <vendor></vendor>
+        <vendorCode>84307</vendorCode>
+        <description><![CDATA[Nasza Lalka wykonana jest z wysokiej jakości materiał&oacute;w. &nbsp;Jej ciało zrobione jest z przyjemnego w dotyku winylu i nadaje się do kąpieli. Gł&oacute;wkę naszej lali zdobią piękne, błękitne oczy z długimi rzęsami oraz niebieska czapeczka z pomponami. Tino ubrany jest w niebieskie body z kr&oacute;liczkiem, puchatą białą bluzę z kapturem oraz skarpetki pasujące do kompletu. Do lalki dołączony jest ozdobny smoczek. Lalka zapakowana jest w kartonowe pudełko idealne na prezent.]]></description>
+        <sales_notes><![CDATA[Nasza Lalka wykonana jest z wysokiej jakości materiał&oacute;w. &nbsp;Jej ciało zrobione jest z przyjemnego w dotyku winylu i nadaje się do kąpieli. Gł&oacute;wkę naszej lali zdobią piękne, błękitne oczy z długimi rzęsami oraz niebieska czapeczka z pomponami. Tino ubrany jest w niebieskie body z kr&oacute;liczkiem, puchatą białą bluzę z kapturem oraz skarpetki pasujące do kompletu. Do lalki dołączony jest ozdobny smoczek. Lalka zapakowana jest w kartonowe pudełko idealne na prezent.]]></sales_notes>
+        <country_of_origin></country_of_origin>
+      </offer>
+
+    </offers>
+  </shop>
+</yml_catalog>

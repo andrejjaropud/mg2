@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Landofcoder
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Landofcoder.com license that is
+ * available through the world-wide-web at this URL:
+ * http://landofcoder.com/license
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Landofcoder
+ * @package    Lof_HidePrice
+ * @copyright  Copyright (c) 2016 Landofcoder (http://www.landofcoder.com/)
+ * @license    http://www.landofcoder.com/LICENSE-1.0.html
+ */
+-->
+
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="lofhideprice_contact" class="Lof\HidePrice\Block\Widget\HidePrice">
+        <label translate="true">Lof HidePrice: Contact Form</label>
+        <description>ContactUs - custom widget</description>
+        <parameters>
+            <parameter name="cc_title" xsi:type="text" visible="true" required="true" sort_order="0" >
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="cc_content" xsi:type="text" visible="true" sort_order="10">
+                <label translate="true">Description</label>
+            </parameter>
+            <parameter name="cc_enable_recaptcha" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="20">
+                <label translate="true">Enable reCaptcha</label>
+                <description>Enable/Disable reCaptcha</description>
+            </parameter>
+            <parameter name="cc_enable_phoneno" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="30">
+                <label translate="true">Show Phone Number Field</label>
+                <description>Show Phone Number field in contact us form</description>
+            </parameter>
+        </parameters>
+    </widget>
+    <widget id="lofhideprice_login" class="Lof\HidePrice\Block\Widget\Login">
+        <label translate="true">Lof HidePrice: Login Form</label>
+        <description>Login - custom widget</description>
+        <parameters>
+            <parameter name="cc_title" xsi:type="text" visible="true" required="true" sort_order="0" >
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="cc_content" xsi:type="text" visible="true" sort_order="10">
+                <label translate="true">Description</label>
+            </parameter>
+        </parameters>
+    </widget>
+</widgets>

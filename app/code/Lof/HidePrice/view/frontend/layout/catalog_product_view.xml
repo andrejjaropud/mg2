@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Landofcoder
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Landofcoder.com license that is
+ * available through the world-wide-web at this URL:
+ * http://landofcoder.com/license
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Landofcoder
+ * @package    Lof_HidePrice
+ * @copyright  Copyright (c) 2016 Landofcoder (http://www.landofcoder.com/)
+ * @license    http://www.landofcoder.com/LICENSE-1.0.html
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="Lof_HidePrice::css/styles.css" />
+	</head>
+	<body>
+		<referenceContainer name="product.info.price">
+			<block class="Lof\HidePrice\Block\Product\View" name="lrw.product.points" before="product.info.stock.sku" template="Lof_HidePrice::product/view/hideprice.phtml"/>
+		</referenceContainer>
+		<referenceBlock class="Lof\HidePrice\Block\Product\View" name="product.info" template="Lof_HidePrice::product/view/form.phtml" after="alert.urls">
+	        <referenceContainer name="product.info.form.content">
+	            <block class="Lof\HidePrice\Block\Product\View" name="product.info.addtocart" as="addtocart" template="Lof_HidePrice::product/view/addtocart.phtml"/>
+	        </referenceContainer>
+	        <referenceBlock class="Magento\Catalog\Block\Product\View" name="product.info.options.wrapper.bottom" as="product_options_wrapper_bottom" template="product/view/options/wrapper/bottom.phtml">
+                <block class="Lof\HidePrice\Block\Product\View" name="product.info.addtocart.additional" as="product.info.addtocart" template="Lof_HidePrice::product/view/addtocart.phtml"/>
+            </referenceBlock>
+	    </referenceBlock>    
+
+	</body>
+</page>

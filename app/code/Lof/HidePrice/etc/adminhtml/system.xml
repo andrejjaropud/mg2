@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Landofcoder
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the Landofcoder.com license that is
+ * available through the world-wide-web at this URL:
+ * http://landofcoder.com/license
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   Landofcoder
+ * @package    Lof_HidePrice
+ * @copyright  Copyright (c) 2016 Landofcoder (http://www.landofcoder.com/)
+ * @license    http://www.landofcoder.com/LICENSE-1.0.html
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <tab id="landofcoder" translate="label" sortOrder="400">
+            <label><![CDATA[<a href="http://landofcoder.com" target="_BLANK" title=""Magento Marketplace, Opencart Marketplace, Magento 2 Extension, Free Magento Extension, Opencart Advanced Reports">landofcoder.com</a>]]></label>
+        </tab>
+        <!-- Contact Form Widget -->
+        <section id="lofhideprice" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Hide Price</label>
+            <tab>landofcoder</tab>
+            <resource>Lof_HidePrice::config_hideprice</resource>
+            <!-- General Group -->
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <!-- Block Enable/Disable -->
+                 <field id="enable_module" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="enable" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Contact Form Widget</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="max_width" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Max Width Popup</label>
+                </field>
+                <field id="max_height" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Max Height Popup</label>
+                </field>
+                <field id="min_width" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Min Width Popup</label>
+                </field>
+                <field id="min_height" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Min Height Popup</label>
+                </field>
+            </group>
+            <!-- reCaptcha Group -->
+            <group id="recaptcha" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>reCaptcha</label>
+                <!-- Captcha Theme -->
+                <field id="recaptcha_theme" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Captcha Theme</label>
+                    <source_model>Lof\HidePrice\Model\Config\Source\Theme</source_model>
+                </field>
+                <!-- Captcha Site Key -->
+                <field id="recaptcha_sitekey" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Captcha Site Key</label>
+                </field>
+                <!-- Captcha Secret key -->
+                <field id="recaptcha_secretkey" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Captcha Secret key</label>
+                </field>
+                <!-- Captcha Error Message -->
+                <field id="recaptcha_errormessage" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Captcha Error Message</label>
+                </field>
+            </group>
+            <!-- Email Setup Options Group -->
+            <group id="emailsend" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Email Setup Options</label>
+                <!-- Send Emails To -->
+                <field id="emailto" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Send Emails To</label>
+                    <validate>validate-email</validate>
+                </field>
+                <!-- Email Sender -->
+                <field id="emailsenderto" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                </field>
+                <!-- Email Template -->
+                <field id="emailtemplate" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Template</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

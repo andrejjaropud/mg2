@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AmazonEnvelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="amzn-envelope.xsd">
+  <Header>
+    <DocumentVersion>1.01</DocumentVersion>
+    <MerchantIdentifier>M_SELLER_354577</MerchantIdentifier>
+  </Header>
+  <MessageType>Product</MessageType>
+  <PurgeAndReplace>true</PurgeAndReplace>
+  <Message>
+    <MessageID>46</MessageID>
+    <OperationType>Update</OperationType>
+    <Product>
+      <SKU><![CDATA[42637]]></SKU>
+      <ProductTaxCode>A_GEN_TAX</ProductTaxCode>
+      <LaunchDate>2005-07-26T00:00:01</LaunchDate>
+      <DescriptionData>
+        <Title><![CDATA[LLORENS Lalka Zareb płacząca 42 cm]]></Title>
+        <Brand><![CDATA[]]></Brand>
+        <Description><![CDATA[<p>Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. Po wyjęciu smoczka lalka zapłacze i zawoła: mama, papa! <br />Gł&oacute;wkę naszej lali zdobi pomarańczowo-beżowa czapeczka z pomponem. Zareb ubrany jest w pomarańczowy kostium, ciepłą szaro-pomarańczową bluzę z &nbsp;kapturem oraz skarpetki z pomponem pasujące do kompletu.<br />Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.</p>]]></Description>
+        <BulletPoint><![CDATA[]]></BulletPoint>
+        <Manufacturer><![CDATA[]]></Manufacturer>
+        <SearchTerms><![CDATA[LLORENS Lalka Zareb płacząca 42 cm]]></SearchTerms>
+        <PurchasingChannel>online</PurchasingChannel>
+        <ItemType>flat-sheets</ItemType>
+        <IsGiftWrapAvailable>false</IsGiftWrapAvailable>
+        <IsGiftMessageAvailable>false</IsGiftMessageAvailable>
+      </DescriptionData>
+      <ProductData>
+        <Miscellaneous></Miscellaneous>
+      </ProductData>
+    </Product>
+  </Message>
+  <Message>
+    <MessageID>49</MessageID>
+    <OperationType>Update</OperationType>
+    <Product>
+      <SKU><![CDATA[42134]]></SKU>
+      <ProductTaxCode>A_GEN_TAX</ProductTaxCode>
+      <LaunchDate>2005-07-26T00:00:01</LaunchDate>
+      <DescriptionData>
+        <Title><![CDATA[LLORENS Lalka Marina płacząca 42 cm]]></Title>
+        <Brand><![CDATA[]]></Brand>
+        <Description><![CDATA[<p>Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. Po wyjęciu smoczka lalka zapłacze i zawoła: mama, papa! <br />Gł&oacute;wkę naszej lali zdobią piękne błękitne oczy, jasne blond włoski oraz biało-r&oacute;żowa czapeczka z pomponem. Marina ubrana jest w r&oacute;żową sukienkę z długim rękawem, ciepły biały bezrękawnik z futrzanym kapturem oraz skarpetki pasujące do kompletu. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent. Do lalki dołączony jest ozdobny smoczek.</p>]]></Description>
+        <BulletPoint><![CDATA[]]></BulletPoint>
+        <Manufacturer><![CDATA[]]></Manufacturer>
+        <SearchTerms><![CDATA[LLORENS Lalka Marina płacząca 42 cm]]></SearchTerms>
+        <PurchasingChannel>online</PurchasingChannel>
+        <ItemType>flat-sheets</ItemType>
+        <IsGiftWrapAvailable>false</IsGiftWrapAvailable>
+        <IsGiftMessageAvailable>false</IsGiftMessageAvailable>
+      </DescriptionData>
+      <ProductData>
+        <Miscellaneous></Miscellaneous>
+      </ProductData>
+    </Product>
+  </Message>
+  <Message>
+    <MessageID>51</MessageID>
+    <OperationType>Update</OperationType>
+    <Product>
+      <SKU><![CDATA[48229]]></SKU>
+      <ProductTaxCode>A_GEN_TAX</ProductTaxCode>
+      <LaunchDate>2005-07-26T00:00:01</LaunchDate>
+      <DescriptionData>
+        <Title><![CDATA[Llorens lalka płacząca Nico]]></Title>
+        <Brand><![CDATA[]]></Brand>
+        <Description><![CDATA[<p>Nasze śliczne lalki wykonane są z wysokiej jakości materiał&oacute;w. Ich ciała zrobione zostały z przyjemnego w dotyku winylu. Brzuszek wypełniony jest miękką wyści&oacute;łką. Po wyjęciu smoczka lalka zapłacze i zawoła: mama, papa! <br />Gł&oacute;wkę naszej lali zdobią piękne błękitne oczy, kr&oacute;tkie blond włoski oraz czapka w kolorze niebieskim z dwoma białymi pomponami. Nico ubrany jest w niebieski kostium z białym misiem, sweterek w kolorze niebieskim oraz skarpetki pasujące do kompletu. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent. Do lalki dołączony jest ozdobny smoczek.</p>]]></Description>
+        <BulletPoint><![CDATA[]]></BulletPoint>
+        <Manufacturer><![CDATA[]]></Manufacturer>
+        <SearchTerms><![CDATA[Llorens lalka płacząca Nico]]></SearchTerms>
+        <PurchasingChannel>online</PurchasingChannel>
+        <ItemType>flat-sheets</ItemType>
+        <IsGiftWrapAvailable>false</IsGiftWrapAvailable>
+        <IsGiftMessageAvailable>false</IsGiftMessageAvailable>
+      </DescriptionData>
+      <ProductData>
+        <Miscellaneous></Miscellaneous>
+      </ProductData>
+    </Product>
+  </Message>
+  <Message>
+    <MessageID>69</MessageID>
+    <OperationType>Update</OperationType>
+    <Product>
+      <SKU><![CDATA[63622]]></SKU>
+      <ProductTaxCode>A_GEN_TAX</ProductTaxCode>
+      <LaunchDate>2005-07-26T00:00:01</LaunchDate>
+      <DescriptionData>
+        <Title><![CDATA[LLORENS Noworodek 36 cm]]></Title>
+        <Brand><![CDATA[]]></Brand>
+        <Description><![CDATA[<p>Nasze śliczne lalki wykonane są z wysokiej jakości materiał&oacute;w. Ich ciała zrobione zostały z przyjemnego w dotyku winylu. Lalka ma piękne, błękitne oczy oraz długie, ciemne rzęsy. Noworodek ubrany jest w bało-r&oacute;żowe śpioszki w małe, r&oacute;żowe gwiazdki. Do lalki dołączony jest smoczek, kocyk, szlafrok, skarpetki oraz r&oacute;żowa czapeczka z pomponami. <br />Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.</p>]]></Description>
+        <BulletPoint><![CDATA[]]></BulletPoint>
+        <Manufacturer><![CDATA[]]></Manufacturer>
+        <SearchTerms><![CDATA[LLORENS Noworodek 36cm]]></SearchTerms>
+        <PurchasingChannel>online</PurchasingChannel>
+        <ItemType>flat-sheets</ItemType>
+        <IsGiftWrapAvailable>false</IsGiftWrapAvailable>
+        <IsGiftMessageAvailable>false</IsGiftMessageAvailable>
+      </DescriptionData>
+      <ProductData>
+        <Miscellaneous></Miscellaneous>
+      </ProductData>
+    </Product>
+  </Message>
+  <Message>
+    <MessageID>78</MessageID>
+    <OperationType>Update</OperationType>
+    <Product>
+      <SKU><![CDATA[74021]]></SKU>
+      <ProductTaxCode>A_GEN_TAX</ProductTaxCode>
+      <LaunchDate>2005-07-26T00:00:01</LaunchDate>
+      <DescriptionData>
+        <Title><![CDATA[LLORENS Lalka Lalo w kostiumie 40 cm]]></Title>
+        <Brand><![CDATA[]]></Brand>
+        <Description><![CDATA[<p>Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. Po naciśnięciu brzuszka bobas zapłacze i zawoła: mama, papa! <br />Smoczek służy do dekoracji. Lalo ubrany jest w cieplutki, biały kostium kr&oacute;liczka. <br />Do lalki dołączony jest ozdobny smoczek oraz zabawka-grzechotka. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.</p>]]></Description>
+        <BulletPoint><![CDATA[]]></BulletPoint>
+        <Manufacturer><![CDATA[]]></Manufacturer>
+        <SearchTerms><![CDATA[LLORENS Lalka Lalo w kostiumie 40 cm]]></SearchTerms>
+        <PurchasingChannel>online</PurchasingChannel>
+        <ItemType>flat-sheets</ItemType>
+        <IsGiftWrapAvailable>false</IsGiftWrapAvailable>
+        <IsGiftMessageAvailable>false</IsGiftMessageAvailable>
+      </DescriptionData>
+      <ProductData>
+        <Miscellaneous></Miscellaneous>
+      </ProductData>
+    </Product>
+  </Message>
+  <Message>
+    <MessageID>95</MessageID>
+    <OperationType>Update</OperationType>
+    <Product>
+      <SKU><![CDATA[84416]]></SKU>
+      <ProductTaxCode>A_GEN_TAX</ProductTaxCode>
+      <LaunchDate>2005-07-26T00:00:01</LaunchDate>
+      <DescriptionData>
+        <Title><![CDATA[LLORENS Noworodek 44 cm]]></Title>
+        <Brand><![CDATA[]]></Brand>
+        <Description><![CDATA[<p>Nasza lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu, a brzuszek wypełniony miękką wyści&oacute;łką. Po naciśnięciu brzuszka bobas zapłacze i zawoła: mama, papa! Smoczek służy do dekoracji. Gł&oacute;wkę naszej lali zdobią piękne, błękitne oczy z długimi, czarnymi rzęsami. Noworodek ubrany jest w &nbsp;r&oacute;żowy kostium z naszywką misia oraz r&oacute;żową bluzę z futrzanym kapturem. Do lalki dołączony jest kocyk oraz smoczek. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.</p>]]></Description>
+        <BulletPoint><![CDATA[]]></BulletPoint>
+        <Manufacturer><![CDATA[]]></Manufacturer>
+        <SearchTerms><![CDATA[LLORENS Noworodek 44 cm]]></SearchTerms>
+        <PurchasingChannel>online</PurchasingChannel>
+        <ItemType>flat-sheets</ItemType>
+        <IsGiftWrapAvailable>false</IsGiftWrapAvailable>
+        <IsGiftMessageAvailable>false</IsGiftMessageAvailable>
+      </DescriptionData>
+      <ProductData>
+        <Miscellaneous></Miscellaneous>
+      </ProductData>
+    </Product>
+  </Message>
+  <Message>
+    <MessageID>111</MessageID>
+    <OperationType>Update</OperationType>
+    <Product>
+      <SKU><![CDATA[73840]]></SKU>
+      <ProductTaxCode>A_GEN_TAX</ProductTaxCode>
+      <LaunchDate>2005-07-26T00:00:01</LaunchDate>
+      <DescriptionData>
+        <Title><![CDATA[LLORENS Lalka Nica w szlafroku 38 cm]]></Title>
+        <Brand><![CDATA[]]></Brand>
+        <Description><![CDATA[<p>Nasze śliczne lalki wykonane są z wysokiej jakości materiał&oacute;w. Ich ciała zrobione zostały z przyjemnego w dotyku winylu. <br />Lala ma błękitne, piękne oczka oraz delikatne rzęsy. Nica ubrana jest w r&oacute;żowy kostium i skarpetki. Do lalki dołączony jest puszysty ręcznik kąpielowy z uroczymi uszkami, czapka z pomponem i ozdobny smoczek. Lalka zapakowana jest w kartonowe pudełko, idealne na prezent.</p>]]></Description>
+        <BulletPoint><![CDATA[]]></BulletPoint>
+        <Manufacturer><![CDATA[]]></Manufacturer>
+        <SearchTerms><![CDATA[LLORENS Lalka Nica w szlafroku 38cm]]></SearchTerms>
+        <PurchasingChannel>online</PurchasingChannel>
+        <ItemType>flat-sheets</ItemType>
+        <IsGiftWrapAvailable>false</IsGiftWrapAvailable>
+        <IsGiftMessageAvailable>false</IsGiftMessageAvailable>
+      </DescriptionData>
+      <ProductData>
+        <Miscellaneous></Miscellaneous>
+      </ProductData>
+    </Product>
+  </Message>
+  <Message>
+    <MessageID>119</MessageID>
+    <OperationType>Update</OperationType>
+    <Product>
+      <SKU><![CDATA[84308]]></SKU>
+      <ProductTaxCode>A_GEN_TAX</ProductTaxCode>
+      <LaunchDate>2005-07-26T00:00:01</LaunchDate>
+      <DescriptionData>
+        <Title><![CDATA[LLORENS bobasek Tina z kocykiem]]></Title>
+        <Brand><![CDATA[]]></Brand>
+        <Description><![CDATA[<p>Nasza Lalka wykonana jest z wysokiej jakości materiał&oacute;w. Jej ciało zrobione jest z przyjemnego w dotyku winylu. Gł&oacute;wkę naszej lali zdobi r&oacute;żowa czapeczka. Tina ubrana jest w r&oacute;żową sukienkę z kr&oacute;liczkiem, puchatą białą bluzę z kapturem oraz skarpetki pasujące do kompletu. Do lalki dołączony jest smoczek. Lalka zapakowana jest w kartonowe pudełko idealne na prezent.</p>]]></Description>
+        <BulletPoint><![CDATA[]]></BulletPoint>
+        <Manufacturer><![CDATA[]]></Manufacturer>
+        <SearchTerms><![CDATA[LLORENS bobasek Tina z kocykiem do kąpieli]]></SearchTerms>
+        <PurchasingChannel>online</PurchasingChannel>
+        <ItemType>flat-sheets</ItemType>
+        <IsGiftWrapAvailable>false</IsGiftWrapAvailable>
+        <IsGiftMessageAvailable>false</IsGiftMessageAvailable>
+      </DescriptionData>
+      <ProductData>
+        <Miscellaneous></Miscellaneous>
+      </ProductData>
+    </Product>
+  </Message>
+  <Message>
+    <MessageID>122</MessageID>
+    <OperationType>Update</OperationType>
+    <Product>
+      <SKU><![CDATA[45003]]></SKU>
+      <ProductTaxCode>A_GEN_TAX</ProductTaxCode>
+      <LaunchDate>2005-07-26T00:00:01</LaunchDate>
+      <DescriptionData>
+        <Title><![CDATA[LLORENS bobas chłopczyk do kąpieli]]></Title>
+        <Brand><![CDATA[]]></Brand>
+        <Description><![CDATA[<p>Bobasek chłopczyk bez ubranka, sprzedawany bez kartonu.</p>]]></Description>
+        <BulletPoint><![CDATA[]]></BulletPoint>
+        <Manufacturer><![CDATA[]]></Manufacturer>
+        <SearchTerms><![CDATA[LLORENS bobas chłopczyk do kąpieli]]></SearchTerms>
+        <PurchasingChannel>online</PurchasingChannel>
+        <ItemType>flat-sheets</ItemType>
+        <IsGiftWrapAvailable>false</IsGiftWrapAvailable>
+        <IsGiftMessageAvailable>false</IsGiftMessageAvailable>
+      </DescriptionData>
+      <ProductData>
+        <Miscellaneous></Miscellaneous>
+      </ProductData>
+    </Product>
+  </Message>
+  <Message>
+    <MessageID>137</MessageID>
+    <OperationType>Update</OperationType>
+    <Product>
+      <SKU><![CDATA[L- V-33]]></SKU>
+      <ProductTaxCode>A_GEN_TAX</ProductTaxCode>
+      <LaunchDate>2005-07-26T00:00:01</LaunchDate>
+      <DescriptionData>
+        <Title><![CDATA[LLORENS Sukienka 33 cm mix wzorów]]></Title>
+        <Brand><![CDATA[]]></Brand>
+        <Description><![CDATA[]]></Description>
+        <BulletPoint><![CDATA[]]></BulletPoint>
+        <Manufacturer><![CDATA[]]></Manufacturer>
+        <SearchTerms><![CDATA[LLORENS Sukienka 33 cm mix wzorów]]></SearchTerms>
+        <PurchasingChannel>online</PurchasingChannel>
+        <ItemType>flat-sheets</ItemType>
+        <IsGiftWrapAvailable>false</IsGiftWrapAvailable>
+        <IsGiftMessageAvailable>false</IsGiftMessageAvailable>
+      </DescriptionData>
+      <ProductData>
+        <Miscellaneous></Miscellaneous>
+      </ProductData>
+    </Product>
+  </Message>
+
+</AmazonEnvelope>
